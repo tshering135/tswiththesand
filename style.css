@@ -1,0 +1,311 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    height: 230px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d0d0d0;
+
+    padding: 25px 40px 0;
+}
+
+
+/* =========================
+   COMPANY / LOGO
+========================= */
+
+.brand {
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.brand h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+
+/* Logo square */
+
+.logo {
+    width: 74px;
+    height: 58px;
+
+    background-color: #eeeeee;
+    border: 1px solid #bdbdbd;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* First diagonal */
+
+.logo span:first-child {
+    position: absolute;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #777777;
+
+    top: 50%;
+    left: 0;
+
+    transform: rotate(38deg);
+}
+
+/* Second diagonal */
+
+.logo span:last-child {
+    position: absolute;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #777777;
+
+    top: 50%;
+    left: 0;
+
+    transform: rotate(-38deg);
+}
+
+
+/* =========================
+   NAVIGATION AREA
+========================= */
+
+.header-bottom {
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Navigation boxes */
+
+.navigation {
+    height: 82px;
+
+    display: flex;
+
+    margin-left: 75px;
+}
+
+.navigation a {
+    width: 170px;
+    height: 82px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: #222222;
+
+    font-size: 11px;
+
+    border: 1px solid #d0d0d0;
+    border-right: none;
+}
+
+.navigation a:last-child {
+    border-right: 1px solid #d0d0d0;
+}
+
+.navigation a:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+
+    margin-right: 2px;
+}
+
+.buttons button {
+    width: 62px;
+    height: 48px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d0d0d0;
+
+    font-family: "Times New Roman", serif;
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.buttons button + button {
+    margin-left: -1px;
+}
+
+.buttons button:hover {
+    background-color: #f3f3f3;
+}
+
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.main {
+    width: 100%;
+    min-height: 325px;
+
+    background-color: #d9d9d9;
+
+    padding: 32px 10%;
+}
+
+
+/* =========================
+   CONTENT BOX
+========================= */
+
+.content-box {
+    width: 100%;
+    max-width: 760px;
+    height: 243px;
+
+    margin: 0 auto;
+
+    background-color: #777777;
+
+    padding: 30px 45px;
+}
+
+
+/* =========================
+   FAKE TEXT LINES
+========================= */
+
+.text-line {
+    width: 100%;
+    height: 55px;
+
+    position: relative;
+}
+
+.text-line span {
+    display: block;
+
+    width: 100%;
+    height: 45px;
+
+    border-top: 1px solid #dddddd;
+
+    transform: skewY(-8deg);
+
+    opacity: 0.8;
+}
+
+.text-line.second {
+    margin-top: 25px;
+}
+
+.text-line.second span {
+    transform: skewY(5deg);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .header-bottom {
+        height: auto;
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .navigation a {
+        width: 25%;
+    }
+
+    .buttons {
+        margin-right: 0;
+    }
+
+    .main {
+        padding: 30px 5%;
+    }
+
+    .content-box {
+        height: 240px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .brand h1 {
+        font-size: 36px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 48px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .navigation a {
+        width: 50%;
+        height: 50px;
+    }
+
+    .content-box {
+        padding: 25px;
+    }
+}
