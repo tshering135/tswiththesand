@@ -3,62 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company</title>
+    <title>Moku</title>
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="header">
+    <nav class="navbar">
 
-        <!-- Company / Logo -->
-        <div class="brand">
-            <h1>COMPANY</h1>
-            <div class="logo">
-                <span></span>
-                <span></span>
-            </div>
+        <!-- Company Name -->
+        <div class="logo">
+            Moku
         </div>
 
-        <!-- Navigation + Buttons -->
-        <div class="header-bottom">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input
+                type="text"
+                class="search"
+                placeholder="Search"
+            >
+        </div>
 
-            <nav class="navigation">
-                <a href="#">HOME</a>
-                <a href="#">ABOUT</a>
-                <a href="#">SERVICES</a>
-                <a href="#">CONTACT</a>
-            </nav>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+            <a href="#">Customer Service</a>
+        </div>
 
-            <div class="buttons">
-                <button>BUTTON</button>
-                <button>BUTTON</button>
-            </div>
+        <!-- Icons -->
+        <div class="nav-icons">
+
+            <!-- Cart Icon -->
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M3 4h2l2.5 12h10L21 7H6"/>
+                <circle cx="9" cy="20" r="1"/>
+                <circle cx="18" cy="20" r="1"/>
+            </svg>
+
+            <!-- Account Icon -->
+            <svg class="icon" viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="3"/>
+                <path d="M5 21c0-3.5 3-6 7-6s7 2.5 7 6"/>
+            </svg>
 
         </div>
 
-    </header>
-
-
-    <!-- Main light-gray section -->
-    <main class="main">
-
-        <!-- Dark content box -->
-        <section class="content-box">
-
-            <div class="text-line">
-                <span></span>
-            </div>
-
-            <div class="text-line second">
-                <span></span>
-            </div>
-
-        </section>
-
-    </main>
+    </nav>
 
 </body>
 </html>

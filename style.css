@@ -1,7 +1,3 @@
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -10,302 +6,141 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
-
 /* =========================
-   HEADER
+   Navigation Bar
 ========================= */
 
-.header {
+.navbar {
     width: 100%;
-    height: 230px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #d0d0d0;
-
-    padding: 25px 40px 0;
-}
-
-
-/* =========================
-   COMPANY / LOGO
-========================= */
-
-.brand {
-    height: 75px;
+    height: 65px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    gap: 20px;
+    padding: 0 24px;
+
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
 }
 
-.brand h1 {
-    font-family: "Times New Roman", serif;
-    font-size: 48px;
-    font-weight: 400;
-    letter-spacing: -2px;
-}
-
-
-/* Logo square */
+/* Company Name */
 
 .logo {
-    width: 74px;
-    height: 58px;
+    min-width: 100px;
 
-    background-color: #eeeeee;
-    border: 1px solid #bdbdbd;
+    font-size: 16px;
+    font-weight: 700;
 
-    position: relative;
-    overflow: hidden;
+    color: #111;
 }
 
-/* First diagonal */
+/* Search */
 
-.logo span:first-child {
-    position: absolute;
-
-    width: 100%;
-    height: 1px;
-
-    background-color: #777777;
-
-    top: 50%;
-    left: 0;
-
-    transform: rotate(38deg);
+.search-container {
+    width: 250px;
+    margin-left: 15px;
 }
 
-/* Second diagonal */
-
-.logo span:last-child {
-    position: absolute;
-
+.search {
     width: 100%;
-    height: 1px;
+    height: 30px;
 
-    background-color: #777777;
+    padding: 0 14px;
 
-    top: 50%;
-    left: 0;
+    border: none;
+    border-radius: 20px;
 
-    transform: rotate(-38deg);
+    background-color: #e5e5e5;
+
+    outline: none;
+
+    font-size: 12px;
 }
 
+.search::placeholder {
+    color: #777;
+}
 
-/* =========================
-   NAVIGATION AREA
-========================= */
+/* Navigation Links */
 
-.header-bottom {
-    width: 100%;
-    height: 85px;
-
+.nav-links {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    gap: 45px;
+
+    margin-left: auto;
+    margin-right: 35px;
 }
 
-
-/* Navigation boxes */
-
-.navigation {
-    height: 82px;
-
-    display: flex;
-
-    margin-left: 75px;
-}
-
-.navigation a {
-    width: 170px;
-    height: 82px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-links a {
+    color: #111;
 
     text-decoration: none;
-    color: #222222;
 
-    font-size: 11px;
-
-    border: 1px solid #d0d0d0;
-    border-right: none;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.navigation a:last-child {
-    border-right: 1px solid #d0d0d0;
+.nav-links a:hover {
+    color: #777;
 }
 
-.navigation a:hover {
-    background-color: #f5f5f5;
-}
+/* Icons */
 
-
-/* =========================
-   BUTTONS
-========================= */
-
-.buttons {
+.nav-icons {
     display: flex;
+    align-items: center;
 
-    margin-right: 2px;
+    gap: 15px;
 }
 
-.buttons button {
-    width: 62px;
-    height: 48px;
+.icon {
+    width: 21px;
+    height: 21px;
 
-    background-color: #ffffff;
-
-    border: 1px solid #d0d0d0;
-
-    font-family: "Times New Roman", serif;
-    font-size: 9px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.8;
 
     cursor: pointer;
 }
 
-.buttons button + button {
-    margin-left: -1px;
-}
-
-.buttons button:hover {
-    background-color: #f3f3f3;
-}
-
-
 /* =========================
-   MAIN SECTION
+   Responsive
 ========================= */
 
-.main {
-    width: 100%;
-    min-height: 325px;
+@media (max-width: 768px) {
 
-    background-color: #d9d9d9;
-
-    padding: 32px 10%;
-}
-
-
-/* =========================
-   CONTENT BOX
-========================= */
-
-.content-box {
-    width: 100%;
-    max-width: 760px;
-    height: 243px;
-
-    margin: 0 auto;
-
-    background-color: #777777;
-
-    padding: 30px 45px;
-}
-
-
-/* =========================
-   FAKE TEXT LINES
-========================= */
-
-.text-line {
-    width: 100%;
-    height: 55px;
-
-    position: relative;
-}
-
-.text-line span {
-    display: block;
-
-    width: 100%;
-    height: 45px;
-
-    border-top: 1px solid #dddddd;
-
-    transform: skewY(-8deg);
-
-    opacity: 0.8;
-}
-
-.text-line.second {
-    margin-top: 25px;
-}
-
-.text-line.second span {
-    transform: skewY(5deg);
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-
-    .header {
-        height: auto;
-        padding: 20px;
+    .navbar {
+        padding: 0 15px;
     }
 
-    .header-bottom {
-        height: auto;
+    .search-container {
+        width: 160px;
+        margin-left: 10px;
+    }
 
-        flex-direction: column;
+    .nav-links {
         gap: 15px;
+        margin-right: 15px;
     }
 
-    .navigation {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .navigation a {
-        width: 25%;
-    }
-
-    .buttons {
-        margin-right: 0;
-    }
-
-    .main {
-        padding: 30px 5%;
-    }
-
-    .content-box {
-        height: 240px;
+    .nav-links a {
+        font-size: 11px;
     }
 }
-
 
 @media (max-width: 600px) {
 
-    .brand h1 {
-        font-size: 36px;
+    .nav-links {
+        display: none;
     }
 
-    .logo {
-        width: 60px;
-        height: 48px;
-    }
-
-    .navigation {
-        flex-wrap: wrap;
-        height: auto;
-    }
-
-    .navigation a {
-        width: 50%;
-        height: 50px;
-    }
-
-    .content-box {
-        padding: 25px;
+    .search-container {
+        width: 180px;
     }
 }
