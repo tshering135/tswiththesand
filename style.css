@@ -26,22 +26,11 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-/* Company Name */
-
-.logo {
-    min-width: 100px;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    color: #111;
-}
-
 /* Search */
 
 .search-container {
     width: 250px;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 .search {
